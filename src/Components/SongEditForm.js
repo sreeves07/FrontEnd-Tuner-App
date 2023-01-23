@@ -9,8 +9,9 @@ function SongEditForm() {
 
   const [song, setsong] = useState({
     name: '',
-    url: '',
-    category: '',
+    artist: '',
+    album: '',
+    time: '',
     is_favorite: false
   });
 
@@ -54,17 +55,17 @@ function SongEditForm() {
           value={song.name}
           type="text"
           onChange={handleTextChange}
-          placeholder="Name of Website"
+          placeholder="Name of Song"
           required
         />
         <label htmlFor="artist">Artist:</label>
         <input
           id="artist"
           type="text"
-          required
-          value={song.url}
+          value={song.artist}
           placeholder="Drake, The Beetles, ..."
           onChange={handleTextChange}
+          required
         />
         <label htmlFor="album">Album:</label>
         <input

@@ -21,8 +21,9 @@ function SongNewForm() {
 
   const [song, setsong] = useState({
     name: '',
-    url: '',
-    category: '',
+    artist: '',
+    album: '',
+    time: '',
     is_favorite: false
   });
 
@@ -54,10 +55,10 @@ function SongNewForm() {
         <input
           id="artist"
           type="text"
-          required
-          value={song.url}
+          value={song.artist}
           placeholder="Drake, The Beetles, ..."
           onChange={handleTextChange}
+          required
         />
         <label htmlFor="album">Album:</label>
         <input
@@ -72,7 +73,7 @@ function SongNewForm() {
           id="time"
           type="text"
           value={song.time}
-          placeholder="Get Rich or Die Tryin, Illmatic, ..."
+          placeholder="4:00"
           onChange={handleTextChange}
         />
         <label htmlFor="is_favorite">Favorite:</label>
